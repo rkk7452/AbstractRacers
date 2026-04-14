@@ -8,7 +8,6 @@
  */
 
 
-
 public abstract class AbstractRacer
 {
     // instance variables
