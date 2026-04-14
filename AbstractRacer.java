@@ -7,6 +7,8 @@
  * @version 2026.4.14
  */
 
+
+
 public abstract class AbstractRacer
 {
     // instance variables
