@@ -29,25 +29,31 @@ public abstract class AbstractRacer
      * subclasses.
      */
     public abstract void move();
+
     /**
      * Overrides the toString method
      */
     public String toString()
     {
-    // to be completed
-        return "";
+        return "Racer: "+name+". Position: "+position;
     }
     /**
      * The getPosition() method returns the current position
      * of the racer.
      */
+    public int getPosition()
+    {
+        return position;
+    }
 
-    // to be completed
     /**
      * The setPosition() method takes a parameter specifying the
      * next position and mutates position to that specified location.
      */
-
-    // to be completed
+    public void setPosition(int newPos)
+    {
+        position = newPos;
+    }
+    
 
 }
