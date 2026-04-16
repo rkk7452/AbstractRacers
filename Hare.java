@@ -1,7 +1,16 @@
+/**
+ * The  class Hare includes a constructor for pace and energy
+ * and a unique move method that moves at a fast pace that
+ * requires breaks to recharge.
+ * 
+ * @author Ryan Kim
+ * @version 2026.4.16
+ */
+
 public class Hare extends AbstractRacer
 {
     private int energy;
-    final int MAX_ENERGY = 10;
+    final int MAX_ENERGY = 12;
     int rand;//movement size
     /**
      * Constructor for the Tortoise class
@@ -28,7 +37,7 @@ public class Hare extends AbstractRacer
             energy-=rand;
         }
         else{
-            if (Math.random()<0.3)
+            if (Math.random()<0.4)
             {
                 energy = MAX_ENERGY;
             }

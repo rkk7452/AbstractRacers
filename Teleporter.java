@@ -1,3 +1,12 @@
+/**
+ * The  class Teleporter includes a constructor for pace
+ * and a unique move method that moves at a slow & steady
+ * pace, but has a chance of teleporting either forwards or
+ * backwards.
+ * 
+ * @author Ryan Kim
+ * @version 2026.4.16
+ */
 public class Teleporter extends AbstractRacer
 {
 

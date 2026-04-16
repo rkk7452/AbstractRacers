@@ -1,3 +1,13 @@
+/**
+ * The  class Tortoise includes a constructor for pace
+ * and a unique move method that moves at a slow & steady
+ * pace. The getPace() and setPace() methods allow the
+ * use to view and change the move increments.
+ * 
+ * @author Ryan Kim
+ * @version 2026.4.16
+ */
+
 public class Tortoise extends AbstractRacer
 {
     private int pace;
