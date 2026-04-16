@@ -1,5 +1,7 @@
 public class Hare extends AbstractRacer
 {
+
+    final int SCALE = 5;//changes the probability of moving and the amount of movement
     /**
      * Constructor for the Tortoise class
      */
@@ -14,10 +16,10 @@ public class Hare extends AbstractRacer
      */
     public void move()
     {
-        int rand = (int) Math.random()*3;
+        int rand = (int) Math.random()*SCALE;
         if (rand == 0)
         {
-            super.setPosition(getPosition()+3);
+            super.setPosition(getPosition()+SCALE);
         }
     }
 }
