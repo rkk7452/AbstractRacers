@@ -1,19 +1,48 @@
 public class Tortoise extends AbstractRacer
 {
+    private int pace;
+    /**
+     * Constructor for the Tortoise class
+     */
+    public Tortoise(int pace)
+    {
+        super("Tortoise");
+        this.pace = pace;
+    }
+
     /**
      * Constructor for the Tortoise class
      */
     public Tortoise()
     {
         super("Tortoise");
+        this.pace = 1;
     }
 
     /**
      * the move method for the tortoise moves the tortoise forward
-     * The tortoise moves slowly at a rate of one unit per move
+     * The tortoise moves at the rate of one pace per move
      */
     public void move()
     {
-        super.setPosition(getPosition()+1);;
+        super.setPosition(getPosition()+pace);;
+    }
+
+    /**
+     * the getPace method returns the pace of the turle
+     * @return the pace the turtle moves at
+     */
+    public int getPace()
+    {
+        return pace;
+    }
+
+    /**
+     * The method setPace sets the pace to a new pace
+     * @param newPace the new pace to move at
+     */
+    public void setPace(int newPace)
+    {
+        pace = newPace;
     }
 }

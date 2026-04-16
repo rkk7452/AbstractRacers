@@ -1,13 +1,16 @@
 public class Hare extends AbstractRacer
 {
-
-    final int SCALE = 5;//changes the probability of moving and the amount of movement
+    private int energy;
+    final int MAX_ENERGY = 10;
+    int rand;//movement size
     /**
      * Constructor for the Tortoise class
      */
     public Hare()
     {
         super("Hare");
+        energy = (int) Math.random()*10;
+        rand = 0;
     }
 
     /**
@@ -16,10 +19,19 @@ public class Hare extends AbstractRacer
      */
     public void move()
     {
-        int rand = (int) Math.random()*SCALE;
-        if (rand == 0)
+
+        if (energy>0)
         {
-            super.setPosition(getPosition()+SCALE);
+            
+            rand = (int) Math.random()*energy+1;
+            super.setPosition(getPosition()+rand);
+            energy-=rand;
+        }
+        else{
+            if (Math.random()<0.3)
+            {
+                energy = MAX_ENERGY;
+            }
         }
     }
 }
