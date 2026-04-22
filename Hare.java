@@ -32,13 +32,12 @@ public class Hare extends AbstractRacer
 
         if (energy>0)
         {
-            
-            rand = (int) Math.random()*energy+1;
+            rand = (int) (Math.random()*energy+1);
             super.setPosition(getPosition()+rand);
             energy-=rand;
         }
         else{
-            if (Math.random()<0.3)
+            if (Math.random()<=(1.0/MAX_ENERGY))
             {
                 energy = MAX_ENERGY;
             }

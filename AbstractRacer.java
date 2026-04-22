@@ -54,6 +54,11 @@ public abstract class AbstractRacer
     {
         position = newPos;
     }
+
+    public String getName()
+    {
+        return name;
+    }
     
 
 }
