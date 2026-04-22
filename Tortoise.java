@@ -13,9 +13,27 @@ public class Tortoise extends AbstractRacer
     /**
      * Constructor for the Tortoise class
      */
+    public Tortoise(int pace, String name)
+    {
+        super(name);
+        this.pace = pace;
+    }
+
+    /**
+     * Constructor for the Tortoise class
+     */
     public Tortoise()
     {
         super("Tortoise");
+        this.pace = 1;
+    }
+
+    /**
+     * Constructor for the Tortoise class
+     */
+    public Tortoise(String name)
+    {
+        super(name);
         this.pace = 1;
     }
 

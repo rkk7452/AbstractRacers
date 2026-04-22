@@ -14,6 +14,16 @@ public class Hare extends AbstractRacer
     }
 
     /**
+     * Constructor for the Tortoise class
+     */
+    public Hare(String name)
+    {
+        super(name);
+        energy = (int) Math.random()*10;
+        rand = 0;
+    }
+
+    /**
      * the move method for the hare moves the hare forward
      * The hare has a 1/3 chance of moving 3 positions, if not, it stays still
      */
