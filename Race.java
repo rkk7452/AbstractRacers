@@ -16,23 +16,23 @@ public class Race
         racers.add(r);
     }
 
-    public void runRace()
+    public boolean checkWin(AbstractRacer r)
     {
-        boolean finished = false;
+        return (r.getPosition()==trackLength);
+    }
 
-        while (!finished)
+    public boolean nextMove()
+    {
+        for (AbstractRacer r : racers)
         {
-            for (AbstractRacer r : racers)
+            r.move();
+            if (checkWin(r))
             {
-                r.move();
-
-                if (r.getPosition() >= trackLength)
-                {
-                    System.out.println(r.getName() + " wins!");
-                    finished = true;
-                    break;
-                }
+                return true;
             }
         }
+        return false;
+
     }
+
 }
